@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+        border: 1px solid gray;
+      }
+      header {
+        border-bottom: 1px solid gray;
+        padding-left: 20px;
+      }
+      footer {
+        border-top: 1px solid gray;
+        padding: 20px;
+        text-align: center;
+      }
+      .content {
+        display: flex;
+      }
+
+      .content nav {
+        border-right: 1px solid gray;
+      }
+      @media (max-width: 500px) {
+        .content {
+          flex-direction: column;
+        }
+        .content nav,
+        .content aside {
+          border: none;
+        }
+      }
+      .content aside {
+        border-left: 1px solid gray;
+        main {
+          order: 0;
+        }
+        nav {
+          order: 1;
+        }
+        aside {
+          order: 2;
+          display: none;
+        }
+      }
+      nav,
+      aside {
+        flex-basis: 150px;
+        flex-shrink: 1;
+      }
+      main {
+        padding: 10px;
+      }
+      nav {
+        order: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>박진현</h1>
+      </header>
+      <section class="content">
+        <main>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, rem
+          repudiandae! Non voluptatem error quis aspernatur aut nemo reiciendis
+          numquam laboriosam magnam qui, adipisci facilis iste odit in veniam
+          molestiae ipsam soluta dolor itaque, sequi eum fugiat cupiditate
+          voluptas maiores! Ea error recusandae, iusto cumque rem voluptatibus
+          ut molestias dicta aut ipsam neque saepe alias cum facilis amet harum
+          voluptate quisquam mollitia, natus iure dignissimos tempora inventore!
+          Quidem eligendi explicabo temporibus adipisci dolores, vitae, aliquam
+          ad exercitationem ratione iste corporis officiis dolorem vel
+          recusandae beatae maxime tenetur itaque. Ex mollitia ad iusto magni
+          suscipit, quae maiores iure expedita pariatur nulla!
+        </main>
+        <nav>
+          <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+          </ul>
+        </nav>
+        <aside>AD</aside>
+      </section>
+      <footer><a href="">홈</a></footer>
+    </div>
+  </body>
+</html>

@@ -263,3 +263,29 @@ column 영역마다 style에 맞는 선이 생기고 선의 굵기고 선의 색
 ```
 
 해당 대상은 column의 영역을 벗어나서 배치되게 된다.
+
+### Media query
+
+```
+    <style>
+      @media (max-width: 500x) {
+        body {
+          background-color: red;
+        }
+      }
+    </style>
+```
+
+max-width는 최대 500px이하일때는 빨간색
+
+min-width는 최소
+500px이상일대는 빨간색
+
+### background
+
+```
+        background-attachment: fixed;
+
+```
+
+background-attachment: fixed를 사용하면 scroll시에도 백그라운드 이미즈는 스크롤 되지 않는다.
